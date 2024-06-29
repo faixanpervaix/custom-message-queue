@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_after">
+        <observer name="FP_CustomMessageQueue::place_order_after" 
+            instance="FP\CustomMessageQueue\Observer\CaptureOrderInformation"/>
+    </event>
+</config>

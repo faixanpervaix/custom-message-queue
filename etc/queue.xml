@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <broker topic="async_custom.message" exchange="magento">
+        <queue name="customMessage" 
+            consumer="customMessageProcessor" 
+            handler="FP\CustomMessageQueue\Model\Consumer::process"/>
+    </broker>
+</config>
